@@ -4,9 +4,9 @@
 	"name": "Paint My House",
 	"author": "Ananta Acharya",
 	"description": "Paint your xLights layout live from a canvas. Owner mode with text and pictures; visitor mode on phones, gated by a rotating QR code or PIN, with timed turns and a queue.",
-	"homeURL": "https://github.com/anantaacharya/fpp-paint-my-house",
-	"srcURL": "https://github.com/anantaacharya/fpp-paint-my-house.git",
-	"bugURL": "https://github.com/anantaacharya/fpp-paint-my-house/issues",
+	"homeURL": "https://github.com/anantaacharya/paintMyHome-fpp",
+	"srcURL": "https://github.com/anantaacharya/paintMyHome-fpp.git",
+	"bugURL": "https://github.com/anantaacharya/paintMyHome-fpp/issues",
 	"allowUpdates": 1,
 	"releaseNotesStyle": "gitHistory",
 	"privacy": {
