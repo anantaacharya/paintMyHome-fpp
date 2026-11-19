@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0b0d14">
+<title>Paint My House</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main id="app">
+  <header class="top">
+    <h1>Paint My House</h1>
+    <div id="timer" class="pill" hidden></div>
+  </header>
+
+  <section id="screen-loading" class="screen card">
+    <p>Loading…</p>
+  </section>
+
+  <section id="screen-closed" class="screen card" hidden>
+    <h2>Lights are resting</h2>
+    <p id="closed-msg">Painting isn't open right now.</p>
+  </section>
+
+  <section id="screen-join" class="screen card" hidden>
+    <h2>Take a turn painting the lights</h2>
+    <p class="muted">Enter the code from the sign out front.</p>
+    <form id="join-form" autocomplete="off">
+      <label id="code-wrap">Code
+        <input id="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6 digits" autocomplete="one-time-code">
+      </label>
+      <label id="pin-wrap" hidden>PIN
+        <input id="pin" maxlength="32" placeholder="PIN" autocomplete="off">
+      </label>
+      <label>Your name <span class="muted">(optional)</span>
+        <input id="nick" maxlength="20" placeholder="e.g. Sam">
+      </label>
+      <button type="submit" class="primary">Join the line</button>
+      <p id="join-error" class="error" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="screen-queue" class="screen card" hidden>
+    <h2>You're in line</h2>
+    <p class="big" id="queue-pos">#1</p>
+    <p class="muted" id="queue-wait"></p>
+    <button id="leave-q" class="ghost">Leave the line</button>
+  </section>
+
+  <section id="screen-paint" class="screen" hidden>
+    <canvas id="house" aria-label="Your house's lights. Draw on it to paint them."></canvas>
+    <div class="toolbar" role="toolbar" aria-label="Paint tools">
+      <div class="tools" id="tools">
+        <button data-tool="brush" class="on" title="Brush">Brush</button>
+        <button data-tool="erase" title="Eraser">Erase</button>
+        <button data-tool="fillmodel" title="Fill a whole prop">Fill</button>
+        <button data-tool="line" title="Line">Line</button>
+        <button data-tool="rect" title="Rectangle">Box</button>
+        <button data-tool="ellipse" title="Circle">Circle</button>
+        <button data-tool="star" title="Star">Star</button>
+        <button data-tool="gradient" title="Gradient">Fade</button>
+      </div>
+      <div class="swatches" id="swatches"></div>
+      <div class="row">
+        <label class="color">Color <input type="color" id="color" value="#ff2a2a"></label>
+        <label class="color" id="color2-wrap" hidden>to <input type="color" id="color2" value="#2a6bff"></label>
+        <label class="size">Size <input type="range" id="size" min="4" max="60" value="14"></label>
+        <label class="chk"><input type="checkbox" id="fill" checked> Solid</label>
+      </div>
+      <div class="row">
+        <button id="all" class="ghost">Paint everything</button>
+        <button id="clear" class="ghost">Clear</button>
+        <button id="done" class="ghost">I'm done</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-bye" class="screen card" hidden>
+    <h2>Thanks for painting!</h2>
+    <p class="muted">The show is back on. Scan the sign again to take another turn later.</p>
+  </section>
+</main>
+<script src="/static/paint.js"></script>
+<script src="/static/visitor.js"></script>
+</body>
+</html>

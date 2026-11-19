@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/FalconChristmas/fpp-plugin-Template/master/pluginInfo.schema.json",
+	"repoName": "fpp-paint-my-house",
+	"name": "Paint My House",
+	"author": "Ananta Acharya",
+	"description": "Paint your xLights layout live from a canvas. Owner mode with text and pictures; visitor mode on phones, gated by a rotating QR code or PIN, with timed turns and a queue.",
+	"homeURL": "https://github.com/OWNER/fpp-paint-my-house",
+	"srcURL": "https://github.com/OWNER/fpp-paint-my-house.git",
+	"bugURL": "https://github.com/OWNER/fpp-paint-my-house/issues",
+	"allowUpdates": 1,
+	"releaseNotesStyle": "gitHistory",
+	"privacy": {
+		"summary": "Runs a small web page on your network (port 8099) so visitors at your house can paint the lights with a code. Sends nothing to the internet.",
+		"sends": [],
+		"collects": [
+			{
+				"what": "Visitor IP address and the name they type, shown in the owner's activity list",
+				"about": "visitors",
+				"keptDays": 0,
+				"canDelete": true,
+				"where": "plugin log (logs/fpp-paint-my-house.log); the in-memory activity list clears on restart"
+			}
+		],
+		"sensors": [],
+		"remoteAccess": "lan",
+		"systemChanges": [],
+		"closedCode": false,
+		"other": "Owner controls use FPP's own API routes (/api/plugin/fpp-paint-my-house/...), which are protected only as well as FPP's UI is: set an FPP UI password if others share your network. Creating the overlay model adds one entry to Pixel Overlay Models."
+	},
+	"versions": [
+		{
+			"minFPPVersion": "10.0",
+			"maxFPPVersion": "0",
+			"branch": "main",
+			"sha": ""
+		}
+	]
+}

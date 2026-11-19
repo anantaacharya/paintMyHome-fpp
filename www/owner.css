@@ -1,0 +1,51 @@
+.pmh { --pmh-line: #d0d5de; --pmh-muted: #6b7280; --pmh-ok: #15803d; --pmh-bad: #b91c1c; --pmh-accent: #f59e0b; }
+.pmh .pmh-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.pmh .pmh-head h2 { margin: 0; }
+.pmh .pmh-head-right { display: flex; align-items: center; gap: 8px; }
+.pmh .pmh-badge { padding: 2px 10px; border-radius: 99px; background: #e5e7eb; font-size: 13px; }
+.pmh .pmh-badge.ok { background: #dcfce7; color: var(--pmh-ok); }
+.pmh .pmh-badge.bad { background: #fee2e2; color: var(--pmh-bad); }
+.pmh .pmh-alert { margin: 10px 0; padding: 10px 12px; border-radius: 8px; background: #eff6ff; border: 1px solid #bfdbfe; }
+.pmh .pmh-alert.warn { background: #fffbeb; border-color: #fcd34d; }
+.pmh .pmh-tabs { display: flex; gap: 4px; margin: 12px 0; border-bottom: 1px solid var(--pmh-line); flex-wrap: wrap; }
+.pmh .pmh-tabs button { border: 0; background: none; padding: 8px 14px; border-bottom: 3px solid transparent; font-weight: 600; cursor: pointer; }
+.pmh .pmh-tabs button.on { border-bottom-color: var(--pmh-accent); }
+.pmh .pmh-paint { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; }
+@media (max-width: 900px) { .pmh .pmh-paint { grid-template-columns: 1fr; } }
+.pmh .pmh-stage canvas { width: 100%; height: min(70vh, 640px); min-height: 280px; display: block; border-radius: 10px; touch-action: none; background: #07080c; }
+.pmh .pmh-hint { color: var(--pmh-muted); margin: 6px 0 0; min-height: 1.4em; }
+.pmh .pmh-side { display: flex; flex-direction: column; gap: 12px; }
+.pmh .pmh-group { border: 1px solid var(--pmh-line); border-radius: 10px; padding: 10px 12px; }
+.pmh .pmh-group h4 { margin: 0 0 8px; font-size: 15px; }
+.pmh .pmh-tools { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.pmh .pmh-tools button { padding: 6px 2px; font-size: 13px; border: 1px solid var(--pmh-line); border-radius: 6px; background: #fff; cursor: pointer; }
+.pmh .pmh-tools button.on { background: var(--pmh-accent); border-color: var(--pmh-accent); color: #1b1400; font-weight: 700; }
+.pmh .pmh-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+.pmh .pmh-row button, .pmh .pmh-list button, .pmh .pmh-card > button { padding: 5px 10px; border: 1px solid var(--pmh-line); border-radius: 6px; background: #f9fafb; cursor: pointer; }
+.pmh button.pmh-danger { color: var(--pmh-bad); }
+.pmh .pmh-grow { flex: 1; }
+.pmh .pmh-input { box-sizing: border-box; max-width: 100%; width: 100%; padding: 5px 8px; border: 1px solid var(--pmh-line); border-radius: 6px; }
+.pmh .pmh-num { width: 90px; box-sizing: border-box; }
+.pmh .pmh-side select { max-width: 100%; }
+.pmh .pmh-muted { color: var(--pmh-muted); font-size: 13px; }
+.pmh .pmh-list { list-style: none; padding: 0; margin: 6px 0; }
+.pmh ol.pmh-list { list-style: decimal; padding-left: 22px; }
+.pmh .pmh-list li { display: flex; gap: 6px; align-items: center; padding: 4px 0; border-bottom: 1px solid #f1f2f5; }
+.pmh ol.pmh-list li { display: list-item; }
+.pmh .pmh-events { max-height: 260px; overflow: auto; }
+.pmh .pmh-events li { display: block; }
+.pmh .pmh-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.pmh .pmh-card { border: 1px solid var(--pmh-line); border-radius: 10px; padding: 14px; }
+.pmh .pmh-card h3 { margin: 0 0 8px; font-size: 17px; }
+.pmh .pmh-card h3:not(:first-child) { margin-top: 16px; }
+.pmh .pmh-wide { grid-column: 1 / -1; }
+.pmh .pmh-state { font-weight: 700; }
+.pmh .pmh-state.ok { color: var(--pmh-ok); }
+.pmh .pmh-state.off { color: var(--pmh-bad); }
+.pmh .pmh-code { text-align: center; padding: 10px; background: #111827; color: #fff; border-radius: 10px; margin: 8px 0; }
+.pmh .pmh-code .pmh-muted { color: #9ca3af; }
+.pmh .pmh-code-digits { font-size: 42px; font-weight: 800; letter-spacing: .2em; font-variant-numeric: tabular-nums; color: #fcd34d; }
+.pmh .pmh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 16px; }
+.pmh .pmh-grid label { display: flex; flex-direction: column; gap: 4px; }
+.pmh .pmh-grid label:has(> input[type=checkbox]) { flex-direction: row; align-items: center; }
+.pmh .pmh-models { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 12px; max-height: 260px; overflow: auto; }
