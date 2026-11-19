@@ -35,7 +35,7 @@ Owner routes live on FPP's web server and are protected the same way FPP's UI is
 
 ## Install
 
-In FPP: *Content Setup → Plugin Manager*, paste the URL of this repo's `pluginInfo.json` (after you push it to GitHub and replace `OWNER` in `pluginInfo.json`). Then follow *Help → Paint My House – Help*.
+In FPP: *Content Setup → Plugin Manager*, paste the URL of this repo's `pluginInfo.json`: `https://raw.githubusercontent.com/anantaacharya/fpp-paint-my-house/main/pluginInfo.json`. Then follow *Help → Paint My House – Help*.
 
 ## Develop and test
 
